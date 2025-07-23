@@ -16,11 +16,48 @@ img {
     max-width: 100%;
 }
 
+/* animation apply */
+@keyframes banner-animation {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateX(-10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(10px);
+    }
+}
+
+@keyframes banner-player-animation {
+    0% {
+        opacity: 0.5;
+        transform: translateX(-20px);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(20px);
+    }
+}
+
 .banner {
     display: flex;
     background-color: black;
     align-items: center;
     gap: 50px;
+
+    animation: banner-animation 1.7s ease-in-out forwards;
 }
 
 .left-side {
@@ -52,6 +89,8 @@ img {
 
 .banner .right-side img {
     display: block;
+
+    animation: banner-player-animation 1.8s infinite;
 }
 
 /* upcoming match start */
