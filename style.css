@@ -64,10 +64,10 @@ img {
 .upcoming-matches-left {
     width: 25%;
     background-color: black;
-    display: grid;
+    display: flex;
     gap: 10px;
     padding: 20px;
-    grid-template-rows: 1fr;
+    flex-direction: column;
     height: fit-content;
 }
 
@@ -114,4 +114,23 @@ img {
 .card-bottom {
     display: flex;
     gap: 20px;
+}
+
+/* For small device */
+@media screen and (max-width: 576px) {
+
+    .upcoming-matches,
+    .banner {
+        flex-direction: column;
+    }
+
+    .upcoming-matches-left {
+        flex-direction: row;
+        width: 100%;
+        background-color: transparent;
+    }
+
+    .upcoming-matches .upcoming-matches-right {
+        grid-template-columns: 1fr;
+    }
 }
